@@ -1,0 +1,128 @@
+* {
+    font-family: 'Tahoma', sans-serif;
+}
+
+/* DESKTOP */
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.cardGroup {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.cardGroup__card {
+    border: 1px solid #d2d7d8;
+    border-radius: 3px;
+    transition: 0.2s all;
+}
+
+.cardGroup__card:nth-child(2) {
+    border-left: none;
+    border-right: none;
+}
+
+.cardGroup__card:hover {
+    margin-left: 10px;
+    margin-right: 10px;
+    transform: scale(1.1);
+}
+
+.cardGroup__card:nth-child(2):hover {
+    border-left: 1px solid #d2d7d8;
+    border-right: 1px solid #d2d7d8;
+}
+
+.cardGroup__card:active {
+    transform: scale(1.15);
+    margin: 17px;
+    background-color: #FEFEFE;
+}
+
+.card__description {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 225px;
+    height: 50px;
+    color: #79959a;
+    font-size: 14px;
+}
+
+.card__descriptionIcon {
+    margin-bottom: 1rem;
+    font-size: 32px;
+    color: #bed4df;
+}
+
+.card__price {
+    padding: 0.25rem 0 0.25rem 0;
+    font-size: 14px;
+    border-top: 1px solid #d2d7d8;
+    background-color: #ecf2f5;
+    color: #79959a;
+    font-weight: bold;
+}
+
+/* MOBILE */
+
+@media (max-width: 762px) {
+
+body {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+    .cardGroup {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 98%;
+        height: 98%;
+    }
+
+    .cardGroup__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 97%;
+        height: 32%;
+    }
+
+    .cardGroup__card:hover {
+        transform: scale(1.02);
+    }
+
+    .cardGroup__card:active {
+        transform: scale(1.02);
+        margin: 0;
+    }
+
+    .cardGroup__card:nth-child(2) {
+        border-left: 1px solid #d2d7d8;
+        border-right: 1px solid #d2d7d8;
+    }
+
+    .card__description {
+        width: auto;
+    }
+
+    .card__descriptionIcon {
+        padding-top: 8%;
+        text-align: center;
+        font-size: 72px;
+    }
+
+    .card__descriptionText {
+        font-size: 22px;
+    }
+
+    .card__price {
+        font-size: 20px;
+    }
+}
